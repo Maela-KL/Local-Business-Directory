@@ -1,0 +1,136 @@
+<!--HTML STRUCTURE TAGS-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!--TITLE & HORIZONTAL NAVIGATION BAR-->
+<head>
+    <meta charset="UTF-8"> <!--displays letters, symbols and special characters correctly-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--helps the website display on different screen sizes, including phones, tablets and computers-->
+
+    <!--HORIZONTAL NAVIGATION BAR BOOTSRAP CSS STYLESHEET. see lines -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!--ICONS ON VERTICAL NAVIGATION BAR-->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <!--LINKING TO THE CREATED STYLE.CSS FILE: which contains all the formaatting for vertical navigation bar icons-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--TITLE OF WEBSITE, HORIZONTAL NAVIGATION BAR, BOOTSRAP-->
+    <!--
+    <nav style="background:rgb(55, 25, 25);padding: 1px;font-family:'Times New Roman', Times, serif">
+        <h1><a href="LocalBusinessDirectory.html" style="color:white;text-decoration:none" font="">LBD</a></h1>
+    </nav>
+    -->
+
+    <header class="title-bar"><h1> <!--creates header and assigns it a title so you can style it with CSS-->
+        <a href="index.html">LBD</a></h1>
+    </header>
+
+    <!--BLACK LINE UNDER NAV BAR FOR AESTHETICS-->
+    <nav style="background:rgb(0, 0, 0);padding: 6px"></nav>
+    
+    <div class="d-flex">
+        <!--BOOTSTRAP NAVIGATION BAR: VERTICAL-->
+        
+   
+        <nav class="sidebar nav flex-column p-2">
+            <aside class="sidebar">
+            <button class="menu-btn">☰</button>
+        </aside>
+
+            <a class="nav-link text-white rounded mb-2 active-link"
+            href="index.html">
+                <i class="bi bi-house sidebar-icon" aria-hidden="true"></i> <!--NAME OF HOME ICON-->
+                <span class="sidebar-text">Home</span>
+            </a>
+
+            <a class="nav-link text-white mb-2"
+            href="ContactUs.html">
+                <i class="bi bi-envelope sidebar-icon"></i> <!--NAME OF CONTACT US ICON-->
+            <span class="sidebar-text">Contact Us</span>
+            </a>
+
+            <a class="nav-link text-white mb-2"
+            href="Settings.html">
+                <i class="bi bi-gear sidebar-icon"></i> <!--NAME OF SETTINGS ICON-->
+                <span class="sidebar-text">Settings</span>
+            </a>
+
+        </nav>
+   
+        <!--SEARCH BAR ON HOME PAGE-->
+        <div class="community-search">
+            <div class="container">
+                <h1>Looking for a place in your community?</h1>
+                
+
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Café">
+                    <button onclick="search()">Search <!--If user clicks on the search bar-->
+                        <span class="search-icon">🔍</span>
+                    </button> 
+                </div>
+
+                <p id="result"></p>
+            </div>
+        </div>
+    
+    </div>
+<main class="container">
+    <h2>Top Visited</h2>
+
+        <div class="places" id="placesContainer">
+            <div class="card">
+                <div class="image-placeholder">Image</div>
+                <p>Place 1</p>
+            </div>
+
+            <div class="card">
+                <div class="image-placeholder">Image</div>
+                <p>Place 2</p>
+            </div>
+
+            <div class="card">
+                <div class="image-placeholder">Image</div>
+                <p>Place 3</p>
+            </div>
+
+            <div class="card">
+                <div class="image-placeholder">Image</div>
+                <p>Place 4</p>
+            </div>
+        </div>
+</main>
+
+    <script>
+        function search() {
+            const query = document.getElementById("search").value.trim();
+            const result = document.getElementById("result"); /* find the HTML element with the ID result, store it in a variable called result to be used later */
+
+            /* FOR LOOP IN CASE USER DOESN'T TYPE ANYTHING IN SEARCH BAR */
+            if (query === "") {
+                result.textContent = "Please enter something to search.";
+            } else {
+                result.textContent = "Results: " + query;
+            }
+        }
+
+        document.getElementById("search").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                search();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

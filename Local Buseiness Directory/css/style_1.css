@@ -1,0 +1,232 @@
+body {
+margin: 0;
+}
+
+/* TITLE POSITIONING */
+.title-bar {
+background: rgb(55, 25, 25);
+height: 115px;
+padding-left: 30px;
+
+display: flex;
+justify-content: flex-start;
+align-items: center;
+
+font-family:'Times New Roman', Times, serif;
+}
+
+/* TITLE POSITIONING */
+.title-bar h1 {
+margin: 0;
+font-size: 55px;
+}
+
+/* TITLE POSITIONING */
+.title-bar a {
+color: white;
+text-decoration: none;
+}
+
+/* SIDEBAR WHEN COLLAPSED */
+.sidebar {
+background: #292321;
+width: 65px;
+min-height: 100vh;
+flex-shrink: 0;
+overflow-x: hidden;
+
+transition: width 0.3s ease;
+}
+
+.nav-btn {
+    padding: 12px;
+    margin: 0 10px;
+    border:1px solid #ccc; 
+    background: #f5f5f5;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* EXPAND WHEN HOVERING */
+.sidebar:hover {
+width: 230px;
+}
+
+/* MENU LINKS */
+.sidebar .nav-link {
+display: flex;
+align-items: center;
+gap: 15px;
+white-space: nowrap;
+overflow: hidden;
+min-height: 48px;
+}
+
+/* ICONS */
+.sidebar-icon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-width: 32px;
+font-size: 24px;
+}
+
+/* HIDE TEXT WHEN COLLAPSED */
+.sidebar-text {
+opacity: 0;
+transition: opacity 0.15s ease;
+}
+
+/* SHOW TEXT WHEN EXPANDED */
+.sidebar:hover .sidebar-text {
+opacity: 1;
+}
+
+/* HIGHLIGHT HOME */
+.sidebar .active-link {
+background: #917664;
+}
+
+/* UNIFORM SIZE NAVIGATION BAR ICONS */
+.sidebar-icon {
+font-size: 20px;
+width: 32px;
+min-width: 32px;
+text-align: center;
+}
+
+/* This highlisghts the navigation bar item (Home, Contact Us, Settinga) as well as the title above when you hover over */
+nav a {
+transition: background-color 0.4s;
+border-radius: 8px;
+}
+nav a:hover {
+background-color: #e2cfc2;
+}
+
+/* SEARCH BAR ON HOME PAGE */
+.community-search {
+flex: 1;
+min-width: 0;
+min-height: calc(100vh - 121px);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px 20px;
+box-sizing: border-box;
+
+transform: translateY(-100px)
+}
+
+.community-search .container {
+width: 100%;
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+}
+
+.community-search h1 {
+font-size: 32px;
+color: #253b35;
+margin-bottom: 28px;
+}
+
+.community-search .search-box {
+display: flex;
+align-items: center;
+gap: 10px;
+width: 100%;
+padding: 8px;
+background: white;
+border: 1px solid #d5ddd8;
+border-radius: 50px;
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.community-search .search-box input {
+flex: 1;
+min-width: 0;
+padding: 14px 18px;
+border: none;
+outline: none;
+background: transparent;
+font-size: 16px;
+}
+
+.community-search .search-box input:focus {
+box-shadow: inset 0 0 0 1px #6b6b6b;
+border-radius: 30px;
+}
+
+.community-search .search-box button {
+padding: 14px 24px;
+border: none;
+border-radius: 50px;
+background: #543f2d;
+color: white;
+font-size: 15px;
+cursor: pointer;
+}
+
+.community-search .search-box button:hover {
+background: #3a2d20;
+}
+
+.community-search #result {
+margin-top: 20px;
+overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+.community-search h1 {
+font-size: 25px;
+}
+
+.community-search .search-box button {
+padding: 12px 16px;
+}
+}
+
+/*Top visited*/
+h2 {
+    margin-bottom: 15px;
+}
+
+.places {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 140px;
+    border: 1px solid #999;
+    background: white;
+}
+
+.image-placeholder {
+    height: 100px;
+    background: #ddd; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+}
+
+
+.card p {
+    padding: 8px;
+}
+
+/*mobile*/
+@media(max-width:768px) {
+    .places {
+        justify-content: center;
+    }
+    .search-bar input {
+        width: 90%;
+    }
+}

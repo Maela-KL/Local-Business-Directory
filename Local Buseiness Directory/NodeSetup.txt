@@ -1,0 +1,17 @@
+1. Install Node.js and npm
+    - Search up node.js on browser and install it
+- To verify if node and npm are installed, type in terminal i.e vs code temrinal
+    - node -v
+    - npm -v
+
+2. Open the '_____ - SED 2115 Assignment 2 - HTTP Website & Prototyping - Maela Kirezi & Audrey Kabunda'
+    - Open the project folder on vs code
+
+In the terminal, type:
+3. npm init -y (This should create package.json)
+
+4. npm install express (This should create package-lock.json, name node_modules and add Express to package.json)
+
+5. node LocalBusinessDirectory.js (This start the server)
+
+6. Open http://localhost:3000 on browser
